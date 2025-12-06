@@ -3,9 +3,9 @@ import { MapPin, Ruler, Globe, GraduationCap } from "lucide-react";
 
 const stats = [
   { icon: Ruler, label: "Height", value: "6'4\"", subtext: "193 cm" },
-  { icon: MapPin, label: "Nationality", value: "Hungarian", subtext: "Central European" },
-  { icon: Globe, label: "Ethnicity", value: "Mixed", subtext: "German / Slavic" },
-  { icon: GraduationCap, label: "Education", value: "B.S. Computer Science", subtext: "Tech-minded" },
+  { icon: MapPin, label: "Nationality", value: "Hungarian", subtext: "Budapest, Hungary" },
+  { icon: Globe, label: "Ethnicity", value: "Hungarian", subtext: "Part Slavic, Part German" },
+  { icon: GraduationCap, label: "Education", value: "B.S. Computer Science", subtext: "Fresh graduate" },
 ];
 
 const languages = ["Hungarian", "German", "Polish", "Japanese"];
