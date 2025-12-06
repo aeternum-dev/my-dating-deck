@@ -6,7 +6,7 @@ const careers = [
   { icon: Clapperboard, title: "Actor", status: "current" },
   { icon: Megaphone, title: "Social Media Marketing", status: "current" },
   { icon: BookOpen, title: "Teaching", status: "current" },
-  { icon: Rocket, title: "Business Owner", status: "soon", note: "deathclassic" },
+  { icon: Rocket, title: "Business Owner", status: "soon", note: "deathclassic, hopefully" },
 ];
 
 const CareerSlide = () => {
@@ -23,9 +23,6 @@ const CareerSlide = () => {
           <h2 className="text-4xl md:text-5xl font-display font-semibold">
             Multi-Hyphenate
           </h2>
-          <p className="text-muted-foreground max-w-sm">
-            Because choosing just one thing was never an option
-          </p>
         </div>
 
         <div className="space-y-3">
