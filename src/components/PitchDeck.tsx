@@ -9,6 +9,7 @@ import CareerSlide from "./slides/CareerSlide";
 import HobbiesSlide from "./slides/HobbiesSlide";
 import PersonalitySlide from "./slides/PersonalitySlide";
 import BigFiveSlide from "./slides/BigFiveSlide";
+import GallerySlide from "./slides/GallerySlide";
 import OutroSlide from "./slides/OutroSlide";
 
 const slides = [
@@ -18,6 +19,7 @@ const slides = [
   { id: "hobbies", component: HobbiesSlide },
   { id: "personality", component: PersonalitySlide },
   { id: "bigfive", component: BigFiveSlide },
+  { id: "gallery", component: GallerySlide },
   { id: "outro", component: OutroSlide },
 ];
 
