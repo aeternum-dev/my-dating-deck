@@ -26,7 +26,7 @@ const HobbiesSlide = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {hobbies.map((hobby, index) => (
             <motion.div
               key={hobby.name}
