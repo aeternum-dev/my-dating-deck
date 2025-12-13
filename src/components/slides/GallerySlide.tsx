@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -9,6 +10,15 @@ import gallery4 from "@/assets/gallery-4.png";
 const images = [gallery1, gallery2, gallery3, gallery4];
 
 const GallerySlide = () => {
+  const shuffledImages = useMemo(() => {
+    const arr = [...images];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,14 +27,14 @@ const GallerySlide = () => {
       className="px-8 py-12"
     >
       <div className="space-y-2 mb-6">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Gallery</p>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Snapshots</p>
         <h2 className="text-4xl md:text-5xl font-display font-semibold">
-          Some Moments
+          To get my vibes
         </h2>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
-        {images.map((src, index) => (
+        {shuffledImages.map((src, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
