@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { MapPin, Ruler, Globe, GraduationCap } from "lucide-react";
+import { MapPin, Ruler, Globe, GraduationCap, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: Ruler, label: "Height", value: "6'4\"", subtext: "193 cm" },
-  { icon: MapPin, label: "Nationality", value: "Budapest", subtext: "Hungary" },
-  { icon: Globe, label: "Ethnicity", value: "Hungarian", subtext: "With Slavic and German ancestry" },
-  { icon: GraduationCap, label: "Education", value: "Computer Science", subtext: "Fresh graduate" },
+  { icon: Calendar, label: "Age", value: "Age: 23", subtext: "Freshly Graduated" },
+  { icon: Ruler, label: "Height", value: "Height: 6'4", subtext: "You can wear heels" },
+  { icon: GraduationCap, label: "Education", value: "Computer Science", subtext: "GPA: 4.2/5.0" },
+  { icon: Globe, label: "Ethnicity", value: "Hungarian", subtext: "Slavic / German ancestry" },
+  { icon: MapPin, label: "Location", value: "Budapest, Hungary", subtext: "Willing to relocate for right person" },
 ];
 
 const languages = ["Hungarian", "German", "Polish", "Japanese"];
@@ -20,9 +21,9 @@ const StatsSlide = () => {
         className="space-y-8"
       >
         <div className="space-y-2">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">The Basics</p>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">For starters</p>
           <h2 className="text-4xl md:text-5xl font-display font-semibold">
-            23 Years Old
+            Essential Details
           </h2>
         </div>
 
@@ -33,7 +34,7 @@ const StatsSlide = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="p-4 rounded-xl bg-secondary/50 border border-border/50 space-y-2"
+              className={`p-4 rounded-xl bg-secondary/50 border border-border/50 space-y-2 ${stat.label === "Location" ? "col-span-2" : ""}`}
             >
               <stat.icon className="w-5 h-5 text-primary" />
               <p className="text-lg font-medium text-foreground">{stat.value}</p>

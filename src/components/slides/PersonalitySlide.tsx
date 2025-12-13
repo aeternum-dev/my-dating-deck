@@ -10,9 +10,9 @@ const PersonalitySlide = () => {
         className="space-y-8"
       >
         <div className="space-y-2">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">The Mind</p>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">The Personality</p>
           <h2 className="text-4xl md:text-5xl font-display font-semibold">
-            Personality
+            Quick peak into me
           </h2>
         </div>
 
@@ -48,6 +48,35 @@ const PersonalitySlide = () => {
           </div>
           <p className="text-sm text-muted-foreground mt-2">
             Driven ambition balanced with calm composure
+          </p>
+        </motion.div>
+
+        {/* Zodiac Sign */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="p-5 rounded-xl bg-secondary/50 border border-border/50"
+        >
+          <p className="text-sm text-muted-foreground mb-2">Zodiac Sign</p>
+          <div className="flex items-center gap-3 mb-2">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+            >
+              <path d="M6 4 L6 14 M10 4 L10 14 M14 4 L14 14 Q14 18 18 18 L20 16 L18 14" />
+            </svg>
+            <span className="text-2xl font-display font-semibold text-foreground">Scorpio</span>
+          </div>
+          <p className="text-sm text-muted-foreground mt-2">
+            Intense depth, magnetic presence, and loyalty that runs deeper than words.
           </p>
         </motion.div>
       </motion.div>

@@ -4,9 +4,9 @@ import { Code2, Clapperboard, Megaphone, BookOpen, Rocket } from "lucide-react";
 const careers = [
   { icon: Code2, title: "Software Engineer", status: "current" },
   { icon: Clapperboard, title: "Actor", status: "current" },
-  { icon: Megaphone, title: "Social Media Marketing", status: "current" },
-  { icon: BookOpen, title: "Teacher", status: "current" },
-  { icon: Rocket, title: "Business Owner", status: "soon", note: "hopefully 🤞" },
+  { icon: Megaphone, title: "Social Media Marketer", status: "current" },
+  { icon: BookOpen, title: "Educator and Streamer", status: "current" },
+  { icon: Rocket, title: "Business Owner", status: "soon", note: "hopefully soon🤞" },
 ];
 
 const CareerSlide = () => {

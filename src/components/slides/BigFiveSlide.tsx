@@ -43,9 +43,9 @@ const BigFiveSlide = () => {
         className="space-y-6"
       >
         <div className="space-y-2">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Some more psychology</p>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">A deeper look</p>
           <h2 className="text-4xl md:text-5xl font-display font-semibold">
-            Big Five
+            The Big Five
           </h2>
         </div>
 
