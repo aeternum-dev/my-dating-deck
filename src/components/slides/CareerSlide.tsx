@@ -4,9 +4,9 @@ import { Code2, Clapperboard, Megaphone, BookOpen, Rocket } from "lucide-react";
 const careers = [
   { icon: Code2, title: "Software Engineer", status: "current" },
   { icon: Clapperboard, title: "Actor", status: "current" },
-  { icon: Megaphone, title: "Marketer", status: "current" },
+  { icon: Megaphone, title: "Social Media Marketing", status: "current" },
   { icon: BookOpen, title: "Teacher", status: "current" },
-  { icon: Rocket, title: "Entrepreneur", status: "soon", note: "deathclassic, hopefully" },
+  { icon: Rocket, title: "Business Owner", status: "soon" },
 ];
 
 const CareerSlide = () => {
@@ -47,9 +47,6 @@ const CareerSlide = () => {
               </div>
               <div className="flex-1">
                 <p className="font-medium text-foreground">{career.title}</p>
-                {career.note && (
-                  <p className="text-xs text-primary italic">with {career.note}</p>
-                )}
               </div>
               {career.status === "soon" && (
                 <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-primary">
