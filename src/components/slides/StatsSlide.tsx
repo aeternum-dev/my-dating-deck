@@ -4,7 +4,7 @@ import { MapPin, Ruler, Globe, GraduationCap } from "lucide-react";
 const stats = [
   { icon: Ruler, label: "Height", value: "6'4\"", subtext: "193 cm" },
   { icon: MapPin, label: "Nationality", value: "Hungarian", subtext: "Budapest, Hungary" },
-  { icon: Globe, label: "Ethnicity", value: "Hungarian", subtext: "Part Slavic, Part German" },
+  { icon: Globe, label: "Ethnicity", value: "Hungarian", subtext: "With Slavic, German and Jewish ancestry" },
   { icon: GraduationCap, label: "Education", value: "B.S. Computer Science", subtext: "Fresh graduate" },
 ];
 
