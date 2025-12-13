@@ -14,11 +14,14 @@ const GallerySlide = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="p-6"
+      className="px-8 py-12"
     >
-      <h2 className="font-display text-2xl text-foreground mb-6 text-center">
-        Gallery
-      </h2>
+      <div className="space-y-2 mb-6">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Gallery</p>
+        <h2 className="text-4xl md:text-5xl font-display font-semibold">
+          Some Moments
+        </h2>
+      </div>
 
       <div className="grid grid-cols-2 gap-3">
         {images.map((src, index) => (
