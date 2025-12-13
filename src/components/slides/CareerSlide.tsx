@@ -6,7 +6,7 @@ const careers = [
   { icon: Clapperboard, title: "Actor", status: "current" },
   { icon: Megaphone, title: "Social Media Marketing", status: "current" },
   { icon: BookOpen, title: "Teacher", status: "current" },
-  { icon: Rocket, title: "Business Owner", status: "soon" },
+  { icon: Rocket, title: "Business Owner", status: "soon", note: "hopefully 🤞" },
 ];
 
 const CareerSlide = () => {
@@ -47,6 +47,9 @@ const CareerSlide = () => {
               </div>
               <div className="flex-1">
                 <p className="font-medium text-foreground">{career.title}</p>
+                {"note" in career && career.note && (
+                  <p className="text-xs text-primary italic">{career.note}</p>
+                )}
               </div>
               {career.status === "soon" && (
                 <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-primary">
