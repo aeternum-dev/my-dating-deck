@@ -57,7 +57,7 @@ const PitchDeck = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-background overflow-hidden">
+    <div className="relative w-full h-screen flex items-center justify-center bg-background overflow-hidden py-4">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 opacity-50 pointer-events-none"
@@ -66,39 +66,41 @@ const PitchDeck = () => {
         }}
       />
 
-      {/* Main carousel */}
-      <div className="w-full max-w-lg mx-auto px-4">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {slides.map((slide, index) => (
-              <motion.div
-                key={slide.id}
-                className="flex-none w-full px-2"
-                animate={{
-                  opacity: selectedIndex === index ? 1 : 0.4,
-                  scale: selectedIndex === index ? 1 : 0.95,
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="slide-card">
-                  <slide.component />
-                </div>
-              </motion.div>
-            ))}
+      {/* Main layout with arrows on sides */}
+      <div className="flex items-center justify-center gap-4 w-full max-w-2xl mx-auto px-4">
+        {/* Left arrow */}
+        <button
+          onClick={scrollPrev}
+          className="flex-shrink-0 p-3 rounded-full bg-secondary/50 border border-border/50 text-foreground hover:bg-secondary hover:border-primary/30 transition-all duration-300 disabled:opacity-30"
+          disabled={selectedIndex === 0}
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        {/* Carousel */}
+        <div className="flex-1 max-w-md">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {slides.map((slide, index) => (
+                <motion.div
+                  key={slide.id}
+                  className="flex-none w-full px-2"
+                  animate={{
+                    opacity: selectedIndex === index ? 1 : 0.4,
+                    scale: selectedIndex === index ? 1 : 0.95,
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="slide-card">
+                    <slide.component />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-6 mt-8">
-          <button
-            onClick={scrollPrev}
-            className="p-3 rounded-full bg-secondary/50 border border-border/50 text-foreground hover:bg-secondary hover:border-primary/30 transition-all duration-300 disabled:opacity-30"
-            disabled={selectedIndex === 0}
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          <div className="flex items-center gap-2">
+          {/* Dots indicator below card */}
+          <div className="flex items-center justify-center gap-2 mt-4">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -108,21 +110,22 @@ const PitchDeck = () => {
             ))}
           </div>
 
-          <button
-            onClick={scrollNext}
-            className="p-3 rounded-full bg-secondary/50 border border-border/50 text-foreground hover:bg-secondary hover:border-primary/30 transition-all duration-300 disabled:opacity-30"
-            disabled={selectedIndex === slides.length - 1}
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          {/* Slide counter */}
+          <div className="text-center mt-2">
+            <span className="text-xs text-muted-foreground font-body">
+              {selectedIndex + 1} / {slides.length}
+            </span>
+          </div>
         </div>
 
-        {/* Slide counter */}
-        <div className="text-center mt-4">
-          <span className="text-sm text-muted-foreground font-body">
-            {selectedIndex + 1} / {slides.length}
-          </span>
-        </div>
+        {/* Right arrow */}
+        <button
+          onClick={scrollNext}
+          className="flex-shrink-0 p-3 rounded-full bg-secondary/50 border border-border/50 text-foreground hover:bg-secondary hover:border-primary/30 transition-all duration-300 disabled:opacity-30"
+          disabled={selectedIndex === slides.length - 1}
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
       </div>
     </div>
   );
