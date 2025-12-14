@@ -12,7 +12,7 @@ const hobbies = [
 
 const HobbiesSlide = () => {
   return (
-    <div className="flex flex-col justify-center min-h-[600px] px-8 py-12">
+    <div className="flex flex-col justify-center h-[420px] px-6 py-6 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

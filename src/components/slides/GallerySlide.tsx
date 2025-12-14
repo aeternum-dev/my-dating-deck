@@ -24,31 +24,29 @@ const GallerySlide = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="px-8 py-12"
+      className="h-[420px] px-6 py-6 overflow-hidden flex flex-col"
     >
-      <div className="space-y-2 mb-6">
+      <div className="space-y-1 mb-3">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Snapshots</p>
-        <h2 className="text-4xl md:text-5xl font-display font-semibold">
+        <h2 className="text-3xl md:text-4xl font-display font-semibold">
           To get my vibes
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-2 flex-1 min-h-0">
         {shuffledImages.map((src, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="overflow-hidden rounded-2xl"
+            className="overflow-hidden rounded-xl"
           >
-            <AspectRatio ratio={3 / 4}>
-              <img
-                src={src}
-                alt={`Gallery photo ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
+            <img
+              src={src}
+              alt={`Gallery photo ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         ))}
       </div>
