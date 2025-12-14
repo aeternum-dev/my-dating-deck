@@ -46,6 +46,9 @@ const PersonalitySlide = () => {
             <span className="text-muted-foreground">/</span>
             <span className="text-xl font-display font-semibold text-foreground">Phlegmatic</span>
           </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            Driven ambition balanced with calm composure
+          </p>
         </motion.div>
 
         {/* Zodiac Sign */}
@@ -56,7 +59,7 @@ const PersonalitySlide = () => {
           className="p-4 rounded-xl bg-secondary/50 border border-border/50"
         >
           <p className="text-sm text-muted-foreground mb-2">Zodiac Sign</p>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mb-2">
             <svg
               width="24"
               height="24"
@@ -72,6 +75,9 @@ const PersonalitySlide = () => {
             </svg>
             <span className="text-xl font-display font-semibold text-foreground">Scorpio</span>
           </div>
+          <p className="text-xs text-muted-foreground">
+            Intense depth, magnetic presence, and loyalty that runs deeper than words.
+          </p>
         </motion.div>
       </motion.div>
     </div>
