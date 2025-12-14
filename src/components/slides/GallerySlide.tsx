@@ -42,11 +42,13 @@ const GallerySlide = () => {
             transition={{ duration: 0.4, delay: index * 0.1 }}
             className="overflow-hidden rounded-xl"
           >
-            <img
-              src={src}
-              alt={`Gallery photo ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
+            <AspectRatio ratio={3 / 4}>
+              <img
+                src={src}
+                alt={`Gallery photo ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
           </motion.div>
         ))}
       </div>

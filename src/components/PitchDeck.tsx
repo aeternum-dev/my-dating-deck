@@ -110,12 +110,6 @@ const PitchDeck = () => {
             ))}
           </div>
 
-          {/* Slide counter */}
-          <div className="text-center mt-2">
-            <span className="text-xs text-muted-foreground font-body">
-              {selectedIndex + 1} / {slides.length}
-            </span>
-          </div>
         </div>
 
         {/* Right arrow */}
