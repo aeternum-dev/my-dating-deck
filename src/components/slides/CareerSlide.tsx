@@ -11,7 +11,7 @@ const careers = [
 
 const CareerSlide = () => {
   return (
-    <div className="flex flex-col justify-center h-[420px] px-6 py-6 overflow-hidden">
+    <div className="flex flex-col justify-center min-h-[480px] px-6 py-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 
 const OutroSlide = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-[420px] px-6 py-6 text-center">
+    <div className="flex flex-col items-center justify-center min-h-[480px] px-6 py-6 text-center">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
