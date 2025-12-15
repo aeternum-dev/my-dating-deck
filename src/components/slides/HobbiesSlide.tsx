@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Waves, BookOpen, Brain, Plane, Mountain, Feather } from "lucide-react";
+import { Waves, BookOpen, Brain, Plane, Feather } from "lucide-react";
 
 const hobbies = [
   { icon: Waves, name: "Scuba Diving", vibe: "Exploring the deep" },
@@ -7,7 +7,6 @@ const hobbies = [
   { icon: Brain, name: "Neuroscience", vibe: "Understanding the mind" },
   { icon: Feather, name: "Poetry", vibe: "Words that move" },
   { icon: Plane, name: "Traveling", vibe: "Collecting experiences" },
-  { icon: Mountain, name: "Hiking", vibe: "Summit seeker" },
 ];
 
 const HobbiesSlide = () => {
