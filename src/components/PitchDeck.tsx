@@ -76,9 +76,9 @@ const PitchDeck = () => {
         </button>
 
         {/* Carousel */}
-        <div className="flex-1 max-w-md">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
+        <div className="flex-1 max-w-md h-[520px] flex items-center">
+          <div className="overflow-hidden w-full" ref={emblaRef}>
+            <div className="flex items-center">
               {slides.map((slide, index) => (
                 <motion.div
                   key={slide.id}
@@ -89,7 +89,7 @@ const PitchDeck = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="slide-card">
+                  <div className="slide-card min-h-[480px]">
                     <slide.component />
                   </div>
                 </motion.div>
