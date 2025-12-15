@@ -10,7 +10,6 @@ import HobbiesSlide from "./slides/HobbiesSlide";
 import PersonalitySlide from "./slides/PersonalitySlide";
 import BigFiveSlide from "./slides/BigFiveSlide";
 import GallerySlide from "./slides/GallerySlide";
-import OutroSlide from "./slides/OutroSlide";
 
 const slides = [
   { id: "intro", component: IntroSlide },
@@ -20,7 +19,6 @@ const slides = [
   { id: "personality", component: PersonalitySlide },
   { id: "bigfive", component: BigFiveSlide },
   { id: "gallery", component: GallerySlide },
-  { id: "outro", component: OutroSlide },
 ];
 
 const PitchDeck = () => {

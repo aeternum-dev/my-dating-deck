@@ -28,7 +28,7 @@ const GallerySlide = () => {
     >
       <div className="space-y-1 mb-3">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Snapshots</p>
-        <h2 className="text-3xl md:text-4xl font-display font-semibold">
+        <h2 className="text-3xl md:text-4xl font-display font-semibold pb-3">
           To get my vibes
         </h2>
       </div>
