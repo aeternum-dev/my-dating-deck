@@ -56,28 +56,30 @@ const PersonalitySlide = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="p-4 rounded-xl bg-secondary/50 border border-border/50"
+          className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 transition-all duration-300 hover:border-primary/50"
         >
-          <p className="text-sm text-muted-foreground mb-2">Zodiac Sign</p>
-          <div className="flex items-center gap-3 mb-2">
+          <div className="p-2 rounded-lg bg-muted">
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-primary"
+              className="text-foreground"
             >
               <path d="M6 4 L6 14 M10 4 L10 14 M14 4 L14 14 Q14 18 18 18 L20 16 L18 14" />
             </svg>
-            <span className="text-xl font-display font-semibold text-foreground">Scorpio</span>
           </div>
-          <p className="text-xs text-muted-foreground">
-            Intense depth, magnetic presence, and loyalty that runs deeper than words.
-          </p>
+          <div className="flex-1">
+            <p className="text-sm text-muted-foreground mb-1">Zodiac Sign</p>
+            <p className="font-medium text-foreground">Scorpio</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Intense depth, magnetic presence, and loyalty that runs deeper than words.
+            </p>
+          </div>
         </motion.div>
       </motion.div>
     </div>

@@ -26,21 +26,21 @@ const HobbiesSlide = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="space-y-3">
           {hobbies.map((hobby, index) => (
             <motion.div
               key={hobby.name}
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-secondary/50 to-transparent border border-border/30 hover:border-primary/30 transition-all duration-300"
+              className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 transition-all duration-300 hover:border-primary/50"
             >
-              <div className="p-3 rounded-xl bg-muted group-hover:bg-primary/20 transition-colors duration-300">
-                <hobby.icon className="w-6 h-6 text-primary" />
+              <div className="p-2 rounded-lg bg-muted">
+                <hobby.icon className="w-5 h-5 text-foreground" />
               </div>
               <div className="flex-1">
-                <p className="text-lg font-medium text-foreground">{hobby.name}</p>
-                <p className="text-sm text-muted-foreground italic">{hobby.vibe}</p>
+                <p className="font-medium text-foreground">{hobby.name}</p>
+                <p className="text-xs text-muted-foreground italic">{hobby.vibe}</p>
               </div>
             </motion.div>
           ))}
