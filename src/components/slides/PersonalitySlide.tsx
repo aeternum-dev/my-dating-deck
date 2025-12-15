@@ -56,29 +56,31 @@ const PersonalitySlide = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 transition-all duration-300 hover:border-primary/50"
+          className="p-4 rounded-xl bg-secondary/30 border border-border/50 transition-all duration-300 hover:border-primary/50"
         >
-          <div className="p-2 rounded-lg bg-muted">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-foreground"
-            >
-              <path d="M6 4 L6 14 M10 4 L10 14 M14 4 L14 14 Q14 18 18 18 L20 16 L18 14" />
-            </svg>
-          </div>
-          <div className="flex-1">
-            <p className="text-sm text-muted-foreground mb-1">Zodiac Sign</p>
-            <p className="font-medium text-foreground">Scorpio</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Intense depth, magnetic presence, and loyalty that runs deeper than words.
-            </p>
+          <p className="text-sm text-muted-foreground mb-2">Zodiac Sign</p>
+          <div className="flex items-center gap-4">
+            <div className="p-2 rounded-lg bg-muted self-center">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-foreground"
+              >
+                <path d="M6 4 L6 14 M10 4 L10 14 M14 4 L14 14 Q14 18 18 18 L20 16 L18 14" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <p className="text-xl font-display font-semibold text-foreground">Scorpio</p>
+              <p className="text-xs text-muted-foreground mt-1">
+                Intense depth, magnetic presence, and loyalty that runs deeper than words.
+              </p>
+            </div>
           </div>
         </motion.div>
       </motion.div>
