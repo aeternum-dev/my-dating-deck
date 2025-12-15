@@ -35,7 +35,7 @@ const traits = [
 
 const BigFiveSlide = () => {
   return (
-    <div className="flex flex-col justify-center min-h-[480px] px-6 py-6">
+    <div className="flex flex-col justify-center w-full px-6 py-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -24,7 +24,7 @@ const GallerySlide = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="min-h-[480px] px-6 py-6 flex flex-col"
+      className="w-full px-6 py-6 flex flex-col"
     >
       <div className="space-y-1 mb-3">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Snapshots</p>
