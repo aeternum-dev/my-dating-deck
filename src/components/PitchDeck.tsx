@@ -57,7 +57,7 @@ const PitchDeck = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center bg-background py-6">
+    <div className="relative w-full h-screen flex items-center justify-center bg-background overflow-hidden">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 opacity-50 pointer-events-none"
