@@ -111,7 +111,7 @@
 
 @layer components {
   .slide-card {
-    @apply relative overflow-hidden rounded-2xl border border-border/50;
+    @apply relative overflow-hidden rounded-2xl border border-border/50 flex items-center justify-center;
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
