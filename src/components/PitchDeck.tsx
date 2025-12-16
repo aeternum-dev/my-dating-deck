@@ -76,7 +76,7 @@ const PitchDeck = () => {
         </button>
 
         {/* Carousel */}
-        <div className="flex-1 max-w-md h-[520px] flex items-center">
+        <div className="flex-1 max-w-md flex flex-col items-center justify-center">
           <div className="overflow-hidden w-full" ref={emblaRef}>
             <div className="flex items-center">
               {slides.map((slide, index) => (
@@ -98,7 +98,7 @@ const PitchDeck = () => {
           </div>
 
           {/* Dots indicator below card */}
-          <div className="flex items-center justify-center gap-2 mt-4">
+          <div className="flex items-center justify-center gap-2 mt-6">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -107,7 +107,6 @@ const PitchDeck = () => {
               />
             ))}
           </div>
-
         </div>
 
         {/* Right arrow */}
