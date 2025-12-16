@@ -6,7 +6,7 @@ const stats = [
   { icon: Ruler, label: "Height", value: "Height: 6'4", subtext: "You can wear heels" },
   { icon: GraduationCap, label: "Education", value: "Computer Science", subtext: "GPA: 4.2/5.0" },
   { icon: Globe, label: "Ethnicity", value: "Hungarian", subtext: "Slavic / German ancestry" },
-  { icon: MapPin, label: "Location", value: "Budapest, Hungary", subtext: "Willing to relocate for right person" },
+  { icon: MapPin, label: "Location", value: "Budapest, Hungary", subtext: "Willing to relocate for the right person" },
 ];
 
 const languages = ["Hungarian", "German", "Polish", "Japanese"];
